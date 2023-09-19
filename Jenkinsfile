@@ -8,6 +8,7 @@ node{
         sh 'npm i sonar-scanner' 
         sh 'npm i sonar-scanner --save-dev'
          sh   'npm install'
+         sh 'npm audit fix'
        // sh 'npm run build'
                 }
     }
@@ -16,5 +17,6 @@ node{
  
   stage('ExecuteSonarQubeReport') {
       sh 'npm run sonar-scanner'
+      sh "npm run sonar"
    } 
 }
