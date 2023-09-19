@@ -5,9 +5,10 @@ node{
 
   stage("Build") {
     nodejs(nodeJSInstallationName: 'Node.js') { // Use the name you configured
-        sh 'npm install'
-        sh 'npm run build'
-        }
+        sh 'npm i sonar-scanner' 
+         sh   'npm install'
+       // sh 'npm run build'
+                }
     }
 
    }  
