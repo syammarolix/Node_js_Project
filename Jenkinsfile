@@ -7,6 +7,7 @@ node{
    {
      nodejs(nodeJSInstallationName: 'npm') {
         sh 'npm install'
+        sh 'npm build'
       }
    }  
  
