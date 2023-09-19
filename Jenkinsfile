@@ -13,7 +13,7 @@ node{
  
   stage('ExecuteSonarQubeReport') {
     script {
-      def scannerHome = tool name: 'SonarQube Scanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
+      def scannerHome = tool name: 'sonarqube-scanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
       env.PATH = "${scannerHome}/bin:${env.PATH}"
       sh 'sonar-scanner'
     }
