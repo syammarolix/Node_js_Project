@@ -7,6 +7,7 @@ node{
     nodejs(nodeJSInstallationName: 'Node.js') { // Use the name you configured
         sh 'npm i sonar-scanner' 
         sh 'npm i sonar-scanner --save-dev'
+        sh 'npm i sonarqube-scanner'
          sh   'npm install'
          sh 'npm audit fix'
        // sh 'npm run build'
