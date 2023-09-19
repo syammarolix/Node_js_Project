@@ -6,6 +6,7 @@ node{
   stage("Build") {
     nodejs(nodeJSInstallationName: 'Node.js') { // Use the name you configured
         sh 'npm i sonar-scanner' 
+        sh 'npm i sonar-scanner --save-dev'
          sh   'npm install'
        // sh 'npm run build'
                 }
