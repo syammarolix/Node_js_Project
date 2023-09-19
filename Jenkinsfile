@@ -12,8 +12,10 @@ node{
    }  
  
   stage('ExecuteSonarQubeReport') {
-     nodejs(nodeJSInstallationName: 'npm') {
-        sh 'npm run sonar'
-      }  
+    script {
+      def scannerHome = tool name: 'SonarQube Scanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
+      env.PATH = "${scannerHome}/bin:${env.PATH}"
+      sh 'sonar-scanner'
+    }
    } 
 }
