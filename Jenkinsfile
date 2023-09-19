@@ -16,7 +16,8 @@ node{
    
  
   stage('ExecuteSonarQubeReport') {
-      sh 'npm run sonar-scanner'
       sh "npm run sonar"
+      sh 'npm run sonar-scanner'
+     
    } 
 }
